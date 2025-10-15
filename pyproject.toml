@@ -1,0 +1,28 @@
+[project]
+name = "partnerships-manager-bot"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "theaihopgg",email = "theaihopgg@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "psycopg (>=3.2.10,<4.0.0)",
+    "alembic (>=1.17.0,<2.0.0)",
+    "disnake (>=2.11.0,<3.0.0)",
+    "fastapi[cli] (>=0.119.0,<0.120.0)",
+    "fastapi[nats] (>=0.119.0,<0.120.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=25.9.0,<26.0.0)",
+    "mypy (>=1.18.2,<2.0.0)"
+]
