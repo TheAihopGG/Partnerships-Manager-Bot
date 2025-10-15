@@ -14,10 +14,7 @@ SQLALCHEMY_URL: str = (
     /\
     {assert_getenv("POSTGRES_DB")}"
 )
+NATS_URL: str = f"http://{assert_getenv("NATS_IP")}:{assert_getenv("NATS_PORT")}"
+TEST_GUILDS: list[int] = [int(id) for id in assert_getenv("TEST_GUILDS").rstrip().split(",")]
 
 logger.info("PMBot config loaded")
-
-__all__ = (
-    "DEV_MODE",
-    "SQLALCHEMY_URL",
-)

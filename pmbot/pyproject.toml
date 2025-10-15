@@ -16,6 +16,8 @@ dependencies = [
     "fastapi[nats] (>=0.119.0,<0.120.0)"
 ]
 
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
