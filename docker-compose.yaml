@@ -23,7 +23,7 @@ services:
     command: -js
     ports:
       - "${NATS_PORT}:4222"
-  postgres:
+  pg:
     image: postgres:16.4
     ports:
       - "${POSTGRES_PORT}:5432"
@@ -48,7 +48,7 @@ services:
     ports:
       - "5050:80"
     depends_on:
-      postgres:
+      pg:
         condition: service_healthy
 volumes:
   pgdata:
