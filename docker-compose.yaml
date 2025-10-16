@@ -18,11 +18,6 @@ services:
       - 8000:8000
     volumes:
       - ./pmbot/migrations/versions:/pmbot/migrations/versions
-  nats:
-    image: nats
-    command: -js
-    ports:
-      - "${NATS_PORT}:4222"
   pg:
     image: postgres:16.4
     ports:

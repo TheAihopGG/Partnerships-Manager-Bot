@@ -14,7 +14,6 @@ postgresql+psycopg://\
 /\
 {assert_getenv("POSTGRES_DB")}"
 )
-NATS_URL: str = f"http://{assert_getenv("NATS_IP")}:{assert_getenv("NATS_PORT")}"
 TEST_GUILDS: list[int] = [
     int(id) if id else None for id in assert_getenv("TEST_GUILDS").rstrip().split(",")
 ]
